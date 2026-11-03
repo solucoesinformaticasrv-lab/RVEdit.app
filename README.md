@@ -2,7 +2,7 @@
 
 **Mensagens programadas e respostas automáticas para WhatsApp no Android.**
 
-👉 Site: https://solucoesinformaticasrv-lab.github.io/rvedit.app/
+👉 Site: https://solucoesinformaticasrv-lab.github.io/RVEdit.app/
 
 [⬇️ Baixar o APK](https://github.com/solucoesinformaticasrv-lab/rvedit.app/raw/main/rvedit.apk)
 
