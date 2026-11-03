@@ -4,7 +4,7 @@
 
 👉 Site: https://solucoesinformaticasrv-lab.github.io/rvedit.app/
 
-[⬇️ Baixar o APK](https://github.com/solucoesinformaticasrv-lab/rvedit.app/releases/latest/download/rvedit.apk)
+[⬇️ Baixar o APK](https://github.com/solucoesinformaticasrv-lab/rvedit.app/raw/main/rvedit.apk)
 
 - Agende mensagens para contatos e grupos (uma vez ou repetindo: hora, dia, semana, mês, ano, dias escolhidos)
 - Resposta automática por palavra-chave ou a tudo
