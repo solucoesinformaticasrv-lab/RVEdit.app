@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RVEdit · Mensagens programadas para WhatsApp</title>
+<meta name="description" content="Agende mensagens no WhatsApp e responda automaticamente por palavra-chave. Funciona com WhatsApp, Business e app clonado. 7 dias grátis.">
+<meta property="og:title" content="RVEdit · Mensagens programadas para WhatsApp">
+<meta property="og:description" content="Agende mensagens e respostas automáticas no WhatsApp. 7 dias grátis, depois R$ 15,99/mês.">
+<meta name="theme-color" content="#1F6FEB">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F6FEB'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='28' fill='white' text-anchor='middle'%3ERV%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --brand: #1F6FEB; --brand-dark: #1557c0; --ink: #0f172a; --muted: #475569;
+    --bg: #ffffff; --soft: #f1f5fb; --line: #e2e8f0; --ok: #2E7D32;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --brand: #7AB1FF; --brand-dark: #a5c9ff; --ink: #e5e7eb; --muted: #94a3b8;
+            --bg: #0b1220; --soft: #111a2e; --line: #1f2a44; --ok: #66bb6a; }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         color: var(--ink); background: var(--bg); line-height: 1.6; }
+  a { color: var(--brand); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  header { position: sticky; top: 0; background: color-mix(in srgb, var(--bg) 92%, transparent);
+           backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); z-index: 10; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .logo { font-weight: 800; font-size: 22px; color: var(--brand); text-decoration: none; }
+  nav a { margin-left: 18px; color: var(--muted); text-decoration: none; font-size: 15px; }
+  nav a:hover { color: var(--brand); }
+  @media (max-width: 640px) { nav a.hide-sm { display: none; } }
+
+  .hero { padding: 72px 20px 56px; text-align: center; }
+  .hero h1 { font-size: clamp(32px, 6vw, 52px); line-height: 1.1; margin: 0 0 16px; letter-spacing: -0.02em; }
+  .hero h1 span { color: var(--brand); }
+  .hero p { font-size: 19px; color: var(--muted); max-width: 640px; margin: 0 auto 28px; }
+  .btn { display: inline-flex; align-items: center; gap: 10px; background: var(--brand); color: #fff;
+         padding: 15px 28px; border-radius: 999px; font-weight: 700; font-size: 17px; text-decoration: none;
+         box-shadow: 0 6px 20px color-mix(in srgb, var(--brand) 35%, transparent); }
+  @media (prefers-color-scheme: dark) { .btn { color: #0b1220; } }
+  .btn:hover { background: var(--brand-dark); }
+  .btn svg { width: 20px; height: 20px; }
+  .sub { margin-top: 14px; font-size: 14px; color: var(--muted); }
+
+  section { padding: 56px 0; }
+  section.soft { background: var(--soft); }
+  h2 { font-size: 30px; margin: 0 0 8px; text-align: center; letter-spacing: -0.01em; }
+  .lead { text-align: center; color: var(--muted); margin: 0 auto 36px; max-width: 620px; }
+
+  .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .card { background: var(--bg); border: 1px solid var(--line); border-radius: 16px; padding: 22px; }
+  .card .ic { font-size: 28px; }
+  .card h3 { margin: 8px 0 6px; font-size: 18px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+  .steps { counter-reset: s; list-style: none; padding: 0; margin: 0 auto; max-width: 680px; }
+  .steps li { counter-increment: s; position: relative; padding: 0 0 22px 56px; }
+  .steps li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 38px; height: 38px;
+                      border-radius: 50%; background: var(--brand); color: #fff; font-weight: 700;
+                      display: grid; place-items: center; }
+  @media (prefers-color-scheme: dark) { .steps li::before { color: #0b1220; } }
+  .steps b { display: block; font-size: 17px; }
+  .steps span { color: var(--muted); font-size: 15px; }
+
+  .price { max-width: 420px; margin: 0 auto; text-align: center; border: 2px solid var(--brand);
+           border-radius: 20px; padding: 32px 26px; background: var(--bg); }
+  .price .tag { display: inline-block; background: color-mix(in srgb, var(--ok) 15%, transparent); color: var(--ok);
+                font-weight: 700; padding: 4px 12px; border-radius: 999px; font-size: 14px; }
+  .price .val { font-size: 48px; font-weight: 800; margin: 14px 0 0; }
+  .price .val small { font-size: 18px; color: var(--muted); font-weight: 500; }
+  .price ul { text-align: left; padding-left: 20px; color: var(--muted); }
+
+  details { border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; margin: 0 auto 10px;
+            max-width: 760px; background: var(--bg); }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { color: var(--muted); margin: 10px 0 0; }
+
+  .note { max-width: 760px; margin: 0 auto; font-size: 14px; color: var(--muted); text-align: center; }
+  footer { border-top: 1px solid var(--line); padding: 28px 0; font-size: 14px; color: var(--muted); text-align: center; }
+  footer a { margin: 0 8px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#">RVEdit</a>
+    <nav>
+      <a class="hide-sm" href="#recursos">Recursos</a>
+      <a class="hide-sm" href="#preco">Preço</a>
+      <a href="#instalar">Instalar</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero wrap">
+    <h1>Mensagens no WhatsApp <span>no horário certo</span>, sem você lembrar.</h1>
+    <p>Agende mensagens para contatos e grupos, repita todo dia, semana ou mês, e responda automaticamente por palavra-chave. Funciona com WhatsApp, WhatsApp Business e app clonado.</p>
+    <a class="btn" href="https://github.com/solucoesinformaticasrv-lab/rvedit.app/releases/latest/download/rvedit.apk">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
+      Baixar para Android
+    </a>
+    <div class="sub">7 dias grátis, sem cadastro · depois R$ 15,99/mês · Android 8 ou superior</div>
+  </div>
+
+  <section class="soft" id="recursos">
+    <div class="wrap">
+      <h2>Tudo o que você precisa</h2>
+      <p class="lead">Feito para quem atende clientes pelo WhatsApp e não pode esquecer nenhuma mensagem.</p>
+      <div class="grid">
+        <div class="card"><div class="ic">🗓️</div><h3>Mensagens programadas</h3><p>Escolha data e hora e o RVEdit envia sozinho, mesmo com a tela bloqueada.</p></div>
+        <div class="card"><div class="ic">🔁</div><h3>Repetição flexível</h3><p>A cada hora, todo dia, de segunda a sexta, fins de semana, dias escolhidos, mensal ou anual.</p></div>
+        <div class="card"><div class="ic">👥</div><h3>Contatos e grupos</h3><p>Envie para vários contatos da agenda ou para grupos, com um título para se organizar.</p></div>
+        <div class="card"><div class="ic">🤖</div><h3>Resposta automática</h3><p>Responda por palavra-chave ou a tudo. Escolha para quem: todos, só alguns ou todos menos alguns.</p></div>
+        <div class="card"><div class="ic">📱</div><h3>Vários WhatsApp</h3><p>WhatsApp, Business e app clonado (como o Dual Messenger da Samsung).</p></div>
+        <div class="card"><div class="ic">🔒</div><h3>Desbloqueio e retorno</h3><p>Desbloqueia com seu PIN, envia, bloqueia de novo e volta ao app em que você estava.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="preco">
+    <div class="wrap">
+      <h2>Preço simples</h2>
+      <p class="lead">Use tudo grátis por 7 dias, sem criar conta. Só depois pedimos cadastro e pagamento.</p>
+      <div class="price">
+        <span class="tag">7 dias grátis</span>
+        <div class="val">R$ 15,99 <small>/ mês</small></div>
+        <ul>
+          <li>Mensagens programadas sem limite</li>
+          <li>Respostas automáticas</li>
+          <li>WhatsApp, Business e app clonado</li>
+          <li>Pix, boleto ou cartão · cancele quando quiser</li>
+        </ul>
+        <a class="btn" href="https://github.com/solucoesinformaticasrv-lab/rvedit.app/releases/latest/download/rvedit.apk">Começar grátis</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="instalar">
+    <div class="wrap">
+      <h2>Como instalar</h2>
+      <p class="lead">O RVEdit é instalado direto pelo arquivo APK, fora da Play Store. Leva 2 minutos.</p>
+      <ol class="steps">
+        <li><b>Baixe o APK</b><span>Toque em "Baixar para Android" no seu celular.</span></li>
+        <li><b>Permita a instalação</b><span>Se o Android avisar, toque em "Configurações" e ative "Permitir desta fonte" para o seu navegador ou gerenciador de arquivos.</span></li>
+        <li><b>Abra o RVEdit</b><span>Em Ajustes do app, ative "Envio automático (Acessibilidade)" e "Respostas automáticas (Notificações)". Se aparecer "configuração restrita", vá em Configurações → Apps → RVEdit → ⋮ → Permitir configurações restritas.</span></li>
+        <li><b>Crie sua primeira mensagem</b><span>Escolha o contato, o texto e a hora. Pronto!</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="duvidas">
+    <div class="wrap">
+      <h2>Dúvidas frequentes</h2>
+      <p class="lead">&nbsp;</p>
+      <details><summary>Preciso criar conta para testar?</summary><p>Não. Os 7 dias grátis começam quando você instala. A conta só é pedida quando a avaliação termina ou se você quiser assinar antes.</p></details>
+      <details><summary>Como pago?</summary><p>Dentro do app, com Pix, boleto ou cartão. O pagamento é processado pelo Asaas e o app é liberado automaticamente.</p></details>
+      <details><summary>Posso cancelar?</summary><p>Sim, quando quiser. Você continua usando até o fim do período já pago.</p></details>
+      <details><summary>Por que não está na Play Store?</summary><p>O RVEdit usa o serviço de acessibilidade do Android para tocar em "enviar" por você, e a Play Store restringe esse tipo de automação. Por isso a distribuição é feita por aqui.</p></details>
+      <details><summary>Reinstalar o app reinicia o período grátis?</summary><p>Não. A avaliação fica ligada ao celular.</p></details>
+      <details><summary>Funciona com a tela bloqueada?</summary><p>Sim. Se você salvar seu PIN no app, ele desbloqueia, envia e bloqueia de novo. O PIN fica criptografado só no seu celular.</p></details>
+      <details><summary>Como atualizo?</summary><p>Baixe o APK de novo por esta página e instale por cima. Suas mensagens e configurações são mantidas.</p></details>
+    </div>
+  </section>
+
+  <section class="soft">
+    <div class="wrap">
+      <p class="note">O RVEdit é um aplicativo independente e não tem relação com o WhatsApp nem com a Meta. Use com responsabilidade: envio de spam ou mensagens em massa para quem não pediu pode levar ao bloqueio da sua conta no WhatsApp. Ao usar o app você concorda com os <a href="termos.html">Termos de uso</a> e a <a href="privacidade.html">Política de privacidade</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    © 2026 RVEdit · Soluções Informáticas RV
+    <div style="margin-top:8px">
+      <a href="privacidade.html">Privacidade</a>·<a href="termos.html">Termos</a>·<a href="mailto:solucoesinformaticas.rv@gmail.com">Contato</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
