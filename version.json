@@ -1,6 +1,6 @@
 {
-  "versionCode": 10,
-  "versionName": "0.8.0",
+  "versionCode": 11,
+  "versionName": "0.8.1",
   "url": "https://solucoesinformaticasrv-lab.github.io/RVEdit.app/rvedit.apk",
-  "notes": "Visual novo com a marca RVEdit, desbloqueio com padrão e nova tela de contagem regressiva."
+  "notes": "Corrige as letras difíceis de ler com o celular no modo escuro."
 }
