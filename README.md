@@ -11,7 +11,7 @@
 - WhatsApp, WhatsApp Business e app clonado
 - Desbloqueia a tela com seu PIN, envia e bloqueia de novo
 
-**7 dias grátis sem cadastro**, depois **R$ 15,99/mês** (Pix, boleto ou cartão).
+**7 dias grátis sem cadastro**, depois **R$ 15,99/mês** (cartão com renovação automática ou Pix).
 
 [Política de privacidade](privacidade.html) · [Termos de uso](termos.html)
 
