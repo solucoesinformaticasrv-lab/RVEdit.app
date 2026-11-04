@@ -1,6 +1,6 @@
 {
-  "versionCode": 9,
-  "versionName": "0.7.0",
+  "versionCode": 10,
+  "versionName": "0.8.0",
   "url": "https://solucoesinformaticasrv-lab.github.io/RVEdit.app/rvedit.apk",
-  "notes": "Idioma automático, notificações de envio, pagamento com cartão ou Pix, atualização automática e opção de cancelar a assinatura."
+  "notes": "Visual novo com a marca RVEdit, desbloqueio com padrão e nova tela de contagem regressiva."
 }
