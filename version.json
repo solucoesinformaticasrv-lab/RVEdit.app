@@ -1,6 +1,7 @@
 {
-  "versionCode": 11,
-  "versionName": "0.8.1",
+  "versionCode": 13,
+  "versionName": "0.8.3",
   "url": "https://solucoesinformaticasrv-lab.github.io/RVEdit.app/rvedit.apk",
-  "notes": "Corrige as letras difíceis de ler com o celular no modo escuro."
+  "sha256": "fa373406ca06ef8cf1f41fe3125ca86b5960480eac22f87d5f62c34e78787ae3",
+  "notes": "Pagamento com Pix mais fácil: QR dentro do app, lembrete 2 dias antes e o Pix novo pelo WhatsApp no vencimento. Sem multa nem juros. Também traz melhorias de segurança."
 }
