@@ -1,7 +1,7 @@
 {
-  "versionCode": 13,
-  "versionName": "0.8.3",
+  "versionCode": 14,
+  "versionName": "0.8.4",
   "url": "https://solucoesinformaticasrv-lab.github.io/RVEdit.app/rvedit.apk",
-  "sha256": "fa373406ca06ef8cf1f41fe3125ca86b5960480eac22f87d5f62c34e78787ae3",
-  "notes": "Pagamento com Pix mais fácil: QR dentro do app, lembrete 2 dias antes e o Pix novo pelo WhatsApp no vencimento. Sem multa nem juros. Também traz melhorias de segurança."
+  "sha256": "f5efc64fe1a78535531326103df5d10b2a81ea0d49e765a47c7bf314cf0d5011",
+  "notes": "O RVEdit não pede mais a permissão de instalar apps, assim os apps de banco (como o Nubank) não bloqueiam mais. As próximas atualizações são baixadas pelo navegador."
 }
