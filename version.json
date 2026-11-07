@@ -1,7 +1,7 @@
 {
-  "versionCode": 15,
-  "versionName": "0.8.5",
+  "versionCode": 16,
+  "versionName": "0.8.6",
   "url": "https://solucoesinformaticasrv-lab.github.io/RVEdit.app/rvedit.apk",
-  "sha256": "a702da8f17ed4c23cf686e287eb45a29699a561fcdd18d37d0b43ba672bf29db",
-  "notes": "Agora o RVEdit só \"enxerga\" o WhatsApp quando não está enviando. Isso reduz os alertas de apps de banco (como o Nubank). Se o Nubank ainda bloquear, fale com o suporte."
+  "sha256": "b9b6d4f7a649a6d46991a8c3344cba2852a6fe37229bd54c527864bb129650b1",
+  "notes": "Novo campo de busca nas abas Programadas e Respostas automáticas: digite o nome ou número de um contato para encontrar rápido a programação ou a regra (por exemplo, para desativar o envio)."
 }
