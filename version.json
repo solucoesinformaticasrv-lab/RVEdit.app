@@ -1,7 +1,7 @@
 {
-  "versionCode": 17,
-  "versionName": "0.8.7",
+  "versionCode": 18,
+  "versionName": "0.8.8",
   "url": "https://solucoesinformaticasrv-lab.github.io/RVEdit.app/rvedit.apk",
-  "sha256": "29825b3024262bb169b489cc4360d2e6e8dc93b71b733192cf1a053ad605eccb",
-  "notes": "Reenvio automático: se um envio programado falhar (por exemplo, você mexeu na tela quando o WhatsApp estava abrindo), o app tenta de novo sozinho 2 minutos depois, só para os contatos que falharam."
+  "sha256": "00f7c332794ac6db8bd7a796f7e2252176adbb9ffab033a5ea27ad6e9c70a8c4",
+  "notes": "Preparação para a verificação de desenvolvedor do Android (registro do app). Sem mudanças no uso diário."
 }
