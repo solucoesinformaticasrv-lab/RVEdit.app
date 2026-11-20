@@ -1,7 +1,7 @@
 {
-  "versionCode": 18,
-  "versionName": "0.8.8",
+  "versionCode": 19,
+  "versionName": "0.8.9",
   "url": "https://solucoesinformaticasrv-lab.github.io/RVEdit.app/rvedit.apk",
-  "sha256": "00f7c332794ac6db8bd7a796f7e2252176adbb9ffab033a5ea27ad6e9c70a8c4",
-  "notes": "Preparação para a verificação de desenvolvedor do Android (registro do app). Sem mudanças no uso diário."
+  "sha256": "e15b4b01f88a211b203691f9cb808e8a2e489faa5283e7be38f93971dad8c728",
+  "notes": "Tela de entrar e criar conta mais clara, com olho para ver a senha. Pix agora é pré-pago: se não pagar, a cobrança é cancelada sozinha. Com cartão, botão Cancelar assinatura em Ajustes."
 }
