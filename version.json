@@ -1,7 +1,7 @@
 {
-  "versionCode": 20,
-  "versionName": "0.9.0",
+  "versionCode": 21,
+  "versionName": "0.9.1",
   "url": "https://solucoesinformaticasrv-lab.github.io/RVEdit.app/rvedit.apk",
-  "sha256": "465783a938de8a2892f2d1389ec0438d9ac6fc0a87674c11d36087da8a50fb0d",
-  "notes": "Novo botão Pausar 5 minutos (em Ajustes e no painel rápido) para usar apps de banco como o Nubank sem alerta. Depois o RVEdit volta sozinho ou avisa para reativar com um toque."
+  "sha256": "6fec6932e8ddafcbeb009c2d7e9be0bf3740d6de9ab5d5a2b95e7f9c53c48d0b",
+  "notes": "Notificações com som e um aviso sonoro ao programar uma mensagem. Texto do alerta do banco mais curto: use o botão RVEdit no painel rápido para pausar e reativar."
 }
